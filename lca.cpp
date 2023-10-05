@@ -49,6 +49,6 @@ struct LCA {
         }
       
       int distance(int u, int v){
-        return d[u]+d[v]-2*d[(u, v)];
+        return d[u]+d[v]-2*d[(*this)(u, v)];
       }
 };  
