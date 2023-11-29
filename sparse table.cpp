@@ -27,7 +27,7 @@ struct sparse_table{
 
     inline T get1(int l, int r){
         int s = r-l+1; 
-        int v = __builtin_clz(s);
+        int v = 31- __builtin_clz(s);
 
         return join(st[l][v], st[r-(1<<v)+1][v]);
     }
